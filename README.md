@@ -48,9 +48,17 @@ func printArea(s Shape) {
 
 
 func main() {
+
+
     // Создаем экземпляры типов Circle и Rectangle
+
+
     circle := Circle{Radius: 5.0}
+
+
     rectangle := Rectangle{Width: 4.0, Height: 6.0}
+
+
 }
 
 
