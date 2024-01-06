@@ -5,14 +5,20 @@
 
 
 2) Интерфейсы в go - это определение и описание каких-то конкретных методов которые должны быть у другого типа
-Пример интерфейсоф:
+
+
+Пример интерфейсов:
 
 // Определяем интерфейс
+
+
 type Shape interface {
     Area() float64
 }
 
 // Реализуем интерфейс для типа Circle
+
+
 type Circle struct {
     Radius float64
 }
@@ -22,17 +28,24 @@ func (c Circle) Area() float64 {
 }
 
 // Реализуем интерфейс для типа Rectangle
+
+
 type Rectangle struct {
     Width, Height float64
 }
+
 
 func (r Rectangle) Area() float64 {
     return r.Width * r.Height
 }
 
+
+
 func printArea(s Shape) {
     fmt.Println("Площадь:", s.Area())
 }
+
+
 
 func main() {
     // Создаем экземпляры типов Circle и Rectangle
