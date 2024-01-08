@@ -6,10 +6,12 @@ Q: Как создать строку в Go с использованием stri
 
 A: В Go для создания строки с использованием strings.Builder:
 
+```sh
 var builder strings.Builder
 builder.WriteString("Hello, ")
 builder.WriteString("world!")
 result := builder.String()
+```
 
 Также можно использовать bytes.Buffer аналогичным образом.
 
@@ -58,6 +60,7 @@ A: Порядок итерации по мапе в Go случайный, и н
 
 
 Восьмой вопрос
+
 Q: Какова разница между new и make в Go?
 
 A:
@@ -70,6 +73,8 @@ Q: Как создать срез в Go?
 
 A:
 
+Для slice:
+
 С помощью make:
 
 slice := make([]int, 5, 10) 
@@ -81,3 +86,32 @@ slice := []int{1, 2, 3, 4, 5}
 
 originalSlice := []int{1, 2, 3, 4, 5}
 subSlice := originalSlice[1:3] 
+
+Для map:
+
+С использованием make:
+
+myMap1 := make(map[string]int) // Создание пустой мапы
+
+С использованием литерала мапы:
+
+myMap2 := map[string]int{
+    "one":   1,
+    "two":   2,
+    "three": 3,
+}
+
+Использование функции new:
+
+myMap3 := new(map[string]int)
+*myMap3 = make(map[string]int)
+
+С использованием var:
+
+var myMap4 map[string]int 
+
+Инициализация мапы и добавление элементов:
+
+myMap5 := map[string]int{}
+myMap5["one"] = 1
+myMap5["two"] = 2
