@@ -6,7 +6,7 @@ Q: Как создать строку в Go с использованием stri
 
 A: В Go для создания строки с использованием strings.Builder:
 
-```sh
+```go
 var builder strings.Builder
 builder.WriteString("Hello, ")
 builder.WriteString("world!")
@@ -77,20 +77,20 @@ A:
 
 С помощью make:
 
-```sh
+```go
 slice := make([]int, 5, 10)
 ```
  
 С использованием литерала среза:
 
-```sh
+```go
 slice := []int{1, 2, 3, 4, 5}
 ```
 
 
 Срез среза (подсрез):
 
-```sh
+```go
 originalSlice := []int{1, 2, 3, 4, 5}
 subSlice := originalSlice[1:3] 
 ```
@@ -99,13 +99,13 @@ subSlice := originalSlice[1:3]
 
 С использованием make:
 
-```sh
+```go
 myMap1 := make(map[string]int) // Создание пустой мапы
 ```
 
 С использованием литерала мапы:
 
-```sh
+```go
 myMap2 := map[string]int{
     "one":   1,
     "two":   2,
@@ -115,7 +115,7 @@ myMap2 := map[string]int{
 
 Использование функции new:
 
-```sh
+```go
 myMap3 := new(map[string]int)
 *myMap3 = make(map[string]int)
 ```
