@@ -77,41 +77,59 @@ A:
 
 С помощью make:
 
-slice := make([]int, 5, 10) 
+```sh
+slice := make([]int, 5, 10)
+```
+ 
 С использованием литерала среза:
 
+```sh
 slice := []int{1, 2, 3, 4, 5}
+```
+
 
 Срез среза (подсрез):
 
+```sh
 originalSlice := []int{1, 2, 3, 4, 5}
 subSlice := originalSlice[1:3] 
+```
 
 Для map:
 
 С использованием make:
 
+```sh
 myMap1 := make(map[string]int) // Создание пустой мапы
+```
 
 С использованием литерала мапы:
 
+```sh
 myMap2 := map[string]int{
     "one":   1,
     "two":   2,
     "three": 3,
 }
+```
 
 Использование функции new:
 
+```sh
 myMap3 := new(map[string]int)
 *myMap3 = make(map[string]int)
+```
 
 С использованием var:
-
+```go
 var myMap4 map[string]int 
+```
+
 
 Инициализация мапы и добавление элементов:
 
+```go
 myMap5 := map[string]int{}
 myMap5["one"] = 1
 myMap5["two"] = 2
+```
