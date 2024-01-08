@@ -143,17 +143,17 @@ Q: Что выведет данная программа и почему?
 
 ```go
 func update(p *int) {
-b := 2
-p = &b
+    b := 2
+    p = &b
 }
 func main() {
 var (
-a = 1
-p = &a
+    a = 1
+    p = &a
 )
-fmt.Println(*p)
-update(p)
-fmt.Println(*p)
+    fmt.Println(*p)
+    update(p)
+    fmt.Println(*p)
 }
 ```
 
@@ -167,6 +167,32 @@ A:
 ```
 
 Так как функция update получает копию указателя на переменную a, поэтому изменения внутри функции не влияют на оригинальный указатель в функции main.
+
+Одиннадцатый вопрос
+
+Q: Что выведет данная программа и почему?
+
+
+```go
+func main() {
+    wg := sync.WaitGroup{}
+    for i := 0; i < 5; i++ {
+        wg.Add(1)
+        go func(wg sync.WaitGroup, i int) {
+        fmt.Println(i)
+        wg.Done()
+    }(wg, i)
+}
+    wg.Wait()
+    fmt.Println("exit")
+}
+```
+
+A:
+
+
+
+
 
 
 
